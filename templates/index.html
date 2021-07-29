@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Prediction</title>
+</head>
+<body >
+
+
+  
+    
+    <form action="{{ url_for('predict')}}" method="post">
+            <div class="background"></div>
+
+            </div class='form_input'>
+            <p class="text" >Looking for a property?</p><br><br><br><br><br><br><br><br><br>
+            <p id="avg_income" class="text" >Average income area(in $)<p>
+            <p id='house_age' >House age(in years) </p>
+            <p id='number_of_rooms' class="text" >Number of rooms</p>
+            <p id='number_of_bedrooms' class="text" >Number of bedrooms</p>
+            <p id='area_population' class="text" >Population</p><br>
+            </div>   
+
+
+            <div class="input_values">
+            <input name="average income are" required='required' class="input" >
+            <input name="average area house age" class="input">
+            <input name="average area number of rooms" class="input">        
+            <input name="average area of bedrooms"  class="input">
+            <input name="area population" class="input">
+            </div>    
+
+            <button type="submit" class="btn">Calculate selling price</button>
+
+        </form>
+    
+    
+        <br><br> <h1 class="prediction">{{prediction_text}}</h1>
+
+
+
+        <style>
+            body{
+                background:rgba(0,0,0,0.3)url('https://images.adsttc.com/media/images/5c49/0f9e/284d/d13e/b300/00a8/newsletter/EXT_Pool3.jpg?1548291991');
+                background-size: cover;
+                background-blend-mode: darken;
+                background-position: center;
+
+            }
+            
+            .text{
+                margin-left: 580px;
+                margin-top: 20px;
+                font-size: 14px;
+               
+            }
+            .form_input{
+                position:static;
+            }
+
+            #avg_income{
+                float: left;
+                margin: 0 8%;
+                margin-top: 16px;  
+                color: aqua;     
+                position: static;
+               
+              }
+            #house_age{
+                float: left;
+                margin: 0 0.3%;
+                color: aqua; 
+                position: static;
+            }
+            #number_of_rooms{
+                float: left;
+                margin: 0 10%;
+                color: aqua; 
+                position: static;
+            }
+            #number_of_bedrooms{
+                float: left;
+                margin: 0 1%;
+                color: aqua; 
+                position: static;
+            }
+            #area_population{
+                float: left;
+                margin: 0 8.6%;
+                color: aqua; 
+                position: static;
+            }
+
+           .input{
+               margin-left: 120px;
+               vertical-align: middle;
+               margin-top: 10px;
+               width: 110px;
+               text-align: center;
+               
+           }
+           .input_values{
+
+            position: fixed;
+           }
+
+                 
+            .main{
+                position: absolute;
+                left: 200px;
+                top: 150px;
+                font-size: 40px;
+            }
+            .main2{
+                position: absolute;
+                left: 200px;
+                top: 300px;
+                font-size: 40px;
+
+            }
+          
+            .btn{
+                color:rgb(0, 0, 0);
+                background-color: rgb(255, 255, 255);
+                font-size: 16px;
+                padding: 5px 6px;
+                border: none;
+                margin-top: 110px;
+                margin-left: 580px;
+                position: relative;
+            }
+
+            .prediction{
+                position:absolute;
+                left: 470px;
+                color: rgb(255, 255, 255);
+                margin-top: 100px;
+            }
+
+        
+
+        </style>
+    
+</body>
+</html>
+
+
